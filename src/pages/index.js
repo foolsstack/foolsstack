@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import MyThemeToggler from '../components/ThemeToggler'
 
 class RootIndex extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} >
+        {/* <MyThemeToggler/> */}
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />

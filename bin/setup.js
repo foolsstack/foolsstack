@@ -55,6 +55,7 @@ const questions = [
 inquirer
   .prompt(questions)
   .then(({ spaceId, managementToken, accessToken }) => {
+    console.log(process.env)
     const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
     // env vars are given precedence followed by args provided to the setup
