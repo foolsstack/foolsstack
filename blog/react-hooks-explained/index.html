@@ -1,0 +1,257 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/gatsby-contentful-starter/styles.4c54cfd57d5e404aeae8.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.blog-module--hero--TCejO{display:flex;justify-content:center;align-items:center;height:61.8vh;max-height:400px;background:#e1e1e1;font-size:2em;overflow:hidden}@font-face{font-family:Avenir;font-weight:400;font-style:normal;src:url(/avenir-400.woff2) format("woff2");font-display:swap}body{font-family:Avenir,Tahoma,Arial,Helvetica,sans-serif;font-size:1em;line-height:1.65;color:#373f49;background:#eee;margin:0}img{display:block;width:100%}h1,h2,h3{font-size:2em;font-weight:400}a{color:currentColor}.wrapper{width:calc(100% - 35vmin);margin:0 auto;padding:5vmin 0}.article-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));grid-gap:5vmin}.section-headline{padding:0 0 .4em;margin:0 0 5vmin;border-bottom:1px solid #ddd}.list-inline{margin:0;padding:0;list-style:none}.list-inline li{display:inline-block}.navigation-module--navigation--_yI7y{display:flex;justify-content:center;list-style:none;padding:0;margin:0;height:20vh;max-height:100px;font-size:1.25em}.navigation-module--navigationItem--1plNx{display:inline-flex;align-items:center;margin:0 1em}.navigation-module--navigationItem--1plNx a{color:currentColor}.hero-module--hero--S__gH{position:relative;background:#000;color:#fff;text-align:center}.hero-module--heroImage--DciWV{height:61.8vh;max-height:400px}.hero-module--heroDetails--3uv8x{position:absolute;background:rgba(0,0,0,.7);left:50%;bottom:0;-webkit-transform:translate(-50%);transform:translate(-50%);font-size:14px;padding:0 .5em}@media(min-width:600px){.hero-module--heroDetails--3uv8x{font-size:16px}}@media(min-width:1000px){.hero-module--heroDetails--3uv8x{font-size:20px}}.hero-module--heroHeadline--jhgHQ{margin:0}.hero-module--heroTitle--2LulU{margin:0;font-size:1.125em;font-weight:700}.article-preview-module--previewTitle--16pYm{font-size:1.5em}.article-preview-module--tag--27JAs{color:#a0a0a0;text-decoration:none;display:inline-block;padding:.33333rem .5rem;line-height:1;border-radius:2px;border:1px solid #a0a0a0;margin-right:.5em}</style><meta name="generator" content="Gatsby 2.18.2"/><title data-react-helmet="true">React hooks - Explained | Gatsby Contentful starter</title><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link as="script" rel="preload" href="/gatsby-contentful-starter/webpack-runtime-6730f36da33185871d92.js"/><link as="script" rel="preload" href="/gatsby-contentful-starter/app-ba407b91ab20fd43491a.js"/><link as="script" rel="preload" href="/gatsby-contentful-starter/styles-45d2610478b6c2f50956.js"/><link as="script" rel="preload" href="/gatsby-contentful-starter/commons-b38ec18515ff0d42923d.js"/><link as="script" rel="preload" href="/gatsby-contentful-starter/component---src-templates-blog-post-js-9d80e2798eaf3161b46b.js"/><link as="fetch" rel="preload" href="/gatsby-contentful-starter/page-data/blog/react-hooks-explained/page-data.json" crossorigin="anonymous"/></head><body><script>
+void function() {
+  window.__onThemeChange = function() {}
+
+  var preferredTheme
+  try {
+    preferredTheme = localStorage.getItem('theme')
+  } catch (err) { }
+
+  function setTheme(newTheme) {
+    window.__theme = newTheme
+    preferredTheme = newTheme
+    document.body.className = newTheme
+    window.__onThemeChange(newTheme)
+  }
+
+  window.__setPreferredTheme = function(newTheme) {
+    setTheme(newTheme)
+    try {
+      localStorage.setItem('theme', newTheme)
+    } catch (err) {}
+  }
+
+  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  darkQuery.addListener(function(e) {
+    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+  })
+
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+}()
+    </script><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="max-width:1180px;margin:0 auto"><nav role="navigation"><ul class="navigation-module--navigation--_yI7y"><li class="navigation-module--navigationItem--1plNx"><a href="/gatsby-contentful-starter/">Home</a></li><li class="navigation-module--navigationItem--1plNx"><a href="/gatsby-contentful-starter/blog/">Blog</a></li></ul></nav><div style="background:#fff"><div class="hero-module--hero--S__gH"><div class="hero-module--heroImage--DciWV gatsby-image-wrapper" style="position:relative;overflow:hidden"><div style="width:100%;padding-bottom:50%"></div><img src="data:image/svg+xml,%3csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20width=&#x27;400&#x27;%20height=&#x27;200&#x27;%3e%3cpath%20d=&#x27;M0%20100v100h401V0H0v100m81-37c-4%203-5%208-5%2017l1%207-7%203c-16%208-16%2019%201%2026l6%202-1%207c-1%2013%202%2019%2010%2019%205%200%2013-4%2016-8l2-2%205%204c16%2011%2025%207%2024-11l-1-9%206-2c17-7%2017-20%200-27l-5-2v-9c1-18-10-23-24-10l-4%203-5-3c-9-7-15-8-19-5m2%204c-3%202-3%205-3%2012%201%208%200%207%208%206%205-1%206-1%2010-6l4-4-4-4c-6-6-12-7-15-4m35%200l-10%207%204%205c3%204%204%205%209%206%207%201%207%201%208-5%202-12-3-18-11-13m59%2019l-1%2017v17h3c2%200%202%200%202-8v-8h16v8c0%208%200%208%203%208h2V85h-2c-2%200-3%201-3%208v7h-16v-7c0-7%200-8-2-8l-2%201m39%201c-6%204-7%207-7%2016%200%2011%204%2016%2013%2018%2017%202%2025-24%2010-34-4-3-12-3-16%200m36%200c-12%206-12%2027%201%2032%2011%205%2022-3%2022-17%200-13-12-21-23-15m29%2016c0%2016%200%2017%202%2017s2-1%202-6c0-6%202-11%204-10l6%208c4%207%205%208%207%208s3%200%202-1l-6-10-6-9%206-7c7-8%207-8%204-8-2%200-5%202-10%208l-6%208-1-8c0-7%200-8-2-8s-2%201-2%2018m30-15c-2%202-3%203-3%206%200%205%201%207%209%2010%205%203%206%204%206%207%200%204-3%207-8%206-7-2-7-2-8%200%200%202%207%205%2012%204s9-6%209-10c0-5-2-7-8-10-7-4-9-6-6-10%201-2%202-2%207-2%204%201%205%201%205-1%200-4-10-4-15%200M94%2092c-7%2010-7%2011-2%2019l4%207h8c10%200%209%200%2014-9l4-6-4-8-4-7H96l-2%204m124-1c-7%205-6%2021%201%2025%209%204%2018-6%2015-18-2-8-10-12-16-7m35%200c-6%206-6%2017%200%2023%209%209%2021-5%2016-18-3-7-11-9-16-5M74%2093c-14%205-15%2013-4%2018%208%204%208%204%2011-3l2-5-2-6-3-6-4%202m56%200l-2%206c-2%204-2%204%200%209%203%207%203%207%2010%204%2012-5%2012-12%201-18-6-3-8-3-9-1m-29%202c-5%203-6%2011-1%2014%208%206%2017-4%2011-11-3-4-6-4-10-3m-20%2027c-2%205-1%2014%201%2016%202%203%208%203%2014-2l6-4-2-3c-5-7-6-8-13-9-5%200-6%200-6%202m38-1c-3%200-4%201-7%205-5%206-5%206%203%2011%209%206%2014%203%2014-8%200-10%200-9-10-8&#x27;%20fill=&#x27;%23d3d3d3&#x27;%20fill-rule=&#x27;evenodd&#x27;/%3e%3c/svg%3e" alt="React hooks - Explained" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=295&h=148&q=50&bg=rgb%3A000000 295w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=590&h=295&q=50&bg=rgb%3A000000 590w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=1180&h=590&q=50&bg=rgb%3A000000 1180w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=1500&h=750&q=50&bg=rgb%3A000000 1500w" sizes="(max-width: 1180px) 100vw, 1180px" /><img loading="lazy" sizes="(max-width: 1180px) 100vw, 1180px" srcset="//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=295&h=148&q=50&bg=rgb%3A000000 295w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=590&h=295&q=50&bg=rgb%3A000000 590w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=1180&h=590&q=50&bg=rgb%3A000000 1180w,
+//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=1500&h=750&q=50&bg=rgb%3A000000 1500w" src="//images.ctfassets.net/afq2xws8d2dy/55x1TilacBE0J0s2dN6Sda/8fbf7e2dadb38f63f387af897ba45c53/react_hooks.png?w=1180&q=50&bg=rgb%3A000000" alt="React hooks - Explained" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><div class="wrapper"><h1 class="section-headline">React hooks - Explained</h1><p style="display:block">May 14th, 2017</p><div><p>You might be new to hooks or you just want to sharp your hooks skills, either way in this article, I assume you’ve used React class components and know about React’s state and life cycles.</p>
+<h3>Hooks?</h3>
+<p>Hooks are functions, the rules for using hooks are:</p>
+<ol>
+<li>Don’t use them inside loops, conditions, or nested functions</li>
+<li>Use hooks only inside function components</li>
+</ol>
+<h3>useState</h3>
+<p>Let’s start off with the most common issues hooks are here to solve - state management.
+Until hooks arrived, we had no way to save state inside a <em>function component</em> so we had to wrap it with a class component -> create a state in the class component -> inject the state via props.</p>
+<p>Today we can do it with useState:</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        Add 1
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>useState is a function that receives initialValue as an argument and returns an array with two items: the first is the actual state value and the second is the state’s setter function.</p>
+<h3>useEffect</h3>
+<p>Another major problem using function components is that we don’t have life cycle methods (componentDidMount, componentDidUpdate, componentWillUnmount, etc...).
+Lets say we have a component that receives an userId as a prop, fetches the user’s name from a server and renders its name.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">Username</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      username<span class="token punctuation">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>fetchAndSetUsername <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchAndSetUsername</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchAndSetUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token parameter">prevProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>prevProps<span class="token punctuation">.</span>userId <span class="token operator">!==</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchAndSetUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">fetchAndSetUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetchUserName</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>userId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">username</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> username<span class="token punctuation">:</span> username <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>In the example above, we get the name first when the component mounts using componentDidMount and whenever the userId is changing using componentDidUpdate.
+Another way to understand it is “keep the name updated with the userId prop”.
+We also have to use state as we need to save the name.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Username</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> userId <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>username<span class="token punctuation">,</span> setUsername<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">fetchUserName</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">username</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token function">setUsername</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>userId<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span><span class="token punctuation">{</span>username<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>What happens here?
+We create a name state using useState hook, then setting an useEffect hook to fetch the user’s name and set it to the state each time the userId changes.</p>
+<p>useEffect is a function that accepts a callback function as the first argument and an array of dependencies as a second argument, It returns nothing.
+useEffect is calling the callback function each time one of its dependencies has changed.
+<em>redirect to another article to explain about cleanup function and advanced useEffect stuff</em></p>
+<h3>useMemo</h3>
+<p>As we discovered this far, some hooks are solving function component problems (or missing gaps from class components) but there’s another issue - performance.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">FullnamesList</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> fullNames <span class="token operator">=</span> users<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> user<span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span>lastName<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+      <span class="token punctuation">{</span>fullNames<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fullName</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>In the example above we have a component that takes a list of users (each user is an object that contains a firstName and a lastName, both strings) as a prop and shows a list of their full names.</p>
+<p>Do you see the problem?
+The code runs over the whole list any time the component renders! that might become a performance hit on our app (assume a huge list or a more complex map calculations).</p>
+<p>How can we solve it?
+One way is to tell the component when to render (using React.memo). The second way is to calculate fullNames array only when “users” prop has changed (using useMemo hook).
+Since this article is about React hooks, we will explore only useMemo, check out React.memo in <a href="https://reactjs.org/docs/react-api.html#reactmemo" title="React.memo article">this article</a>.</p>
+<p>The useMemo solution:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">FullnamesList</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> fullNames <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> users<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> user<span class="token punctuation">.</span>firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> user<span class="token punctuation">.</span>lastName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>users<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+      <span class="token punctuation">{</span>fullNames<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fullName</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>useMemo is a function that accepts a callback as the first argument and a dependency array as the second argument. useMemo returns a value, which value? The value returned from the callback function.
+In simple words, useMemo runs the callback function and returns the same value the callback function returns, it runs the callback function again when one of its dependencies has changed.</p>
+<p><em>Read about memoization usages in a React application in this article</em></p>
+<h3>useCallback</h3>
+<p>Another performance enhancer is useCallback, in my opinion we can do well without it but it’s a great tool to have in your pocket, therefore if you’re feeling confused about hooks I recommend you to stop here and master the basic hooks (useState, useEffect and useMemo) before you continue.</p>
+<p>To explain the problem useCallback comes to solve, I’ll use the previous useMemo’s example “FullnamesList” component.</p>
+<p>Lets say we want to implement another prop to this component called "composeFullname” which is a function that takes a first name and last name as arguments and returns a fullname.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">defaultComposeFullname</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">FullnamesList</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> composeFullname <span class="token operator">=</span> defaultComposeFullname <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> fullNames <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> users<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">composeFullname</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> user<span class="token punctuation">.</span>lastName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>users<span class="token punctuation">,</span> composeFullname<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+      <span class="token punctuation">{</span>fullNames<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">fullName</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>li<span class="token operator">></span><span class="token punctuation">{</span>fullName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Note that as we implement composeFullname, we also need to add composeFullname to the dependencies array in useMemo so it will recalculate the list of full names whenever composeFullname is changed.</p>
+<p>What about useCallback??</p>
+<p>Time to implement FullnamesList!</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> firstName<span class="token punctuation">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span> lastName<span class="token punctuation">:</span> <span class="token string">"Doe"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> firstName<span class="token punctuation">:</span> <span class="token string">"Jane"</span><span class="token punctuation">,</span> lastName<span class="token punctuation">:</span> <span class="token string">"Doe"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">composeFullname</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lastName <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> firstName
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>FullnamesList users<span class="token operator">=</span><span class="token punctuation">{</span>users<span class="token punctuation">}</span> composeFullname<span class="token operator">=</span><span class="token punctuation">{</span>composeFullname<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>That's cool! we can control how to compose the full names outside the FullnamesList component. But there's a problem with this code.
+composeFullname is redefined each App's render, meaning FullnamesList gets a different composeFullname prop (that does the same thing) and that's causing unnecessary computations inside FullnamesList (see the dependency array inside FullnamesList's useMemo).</p>
+<p>So now we need a way to define a function that won't be redefined any render.
+useCallback to the rescue:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> users <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> firstName<span class="token punctuation">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span> lastName<span class="token punctuation">:</span> <span class="token string">"Doe"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> firstName<span class="token punctuation">:</span> <span class="token string">"Jane"</span><span class="token punctuation">,</span> lastName<span class="token punctuation">:</span> <span class="token string">"Doe"</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> composeFullname <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> lastName <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> firstName
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>FullnamesList users<span class="token operator">=</span><span class="token punctuation">{</span>users<span class="token punctuation">}</span> composeFullname<span class="token operator">=</span><span class="token punctuation">{</span>composeFullname<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>useCallback is a function that accepts a callback as the first argument and a dependency array as the second argument, same as useMemo, the difference is that useCallback returns a memoized version of the callback from the first argument, meaning it won't re-create a function each render.
+It'll re-create the function when one of its' dependencies has changed.</p>
+<h3>useRef</h3>
+<p>useRef is a great tool used for keeping mutable variables.
+I can't explain it any better than the <a href="https://reactjs.org/docs/hooks-reference.html#useref" title="useRef React docs">React docs</a> so I won't waste your time.</p>
+<h3>useContext</h3>
+<p><a href="https://reactjs.org/docs/context.html" title="React context">Context</a> is a basic React concept that lets multiple components share the same data.
+From my experience, using context is pretty rare and not suggested most of the times, as the React docs says: "...it makes component reuse more difficult".
+If you ask me, useContext is not a necessety, so to avoid confusion, I will elaborate on it on another article.</p>
+<h3>useReducer</h3>
+<p>I'm not using the useReducer hook since I can achive the same result using useState, see <a href="https://medium.com/free-code-camp/why-you-should-choose-usestate-instead-of-usereducer-ffc80057f815" title="Medium article why-you-should-choose-usestate-instead-of-usereducer">this cool article</a>.</p>
+<h2>Summary</h2>
+<p>Hooks are a great concept that might sometimes be confusing.
+Every hook serves a purpose, so when struggling with which hook to use, try asking yourself what is the problem you're trying to solve? Is it a state you need? Do you need to perform an action every prop/state change? Is it a performance issue?...
+I've made a list of hooks clustered by purpose, made to help you answer these questions:</p>
+<p>State management:</p>
+<ul>
+<li>useState</li>
+<li>useReducer</li>
+</ul>
+<p>Lifecycle and prop/state change effects:</p>
+<ul>
+<li>useEffect</li>
+</ul>
+<p>Memoization (performance):</p>
+<ul>
+<li>useCallback</li>
+<li>useMemo</li>
+</ul>
+<p>Mutable variables:</p>
+<ul>
+<li>useRef</li>
+</ul>
+<p>Context (HOC, prop drilling):</p>
+<ul>
+<li>useContext</li>
+</ul>
+<p>I hope that article will help you get started and use hooks more often.</p></div></div></div></div></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-162156206-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/react-hooks-explained/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-ba407b91ab20fd43491a.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-9d80e2798eaf3161b46b.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-0b7aef8c2a83eaa2eabb.js"],"component---src-pages-index-js":["/component---src-pages-index-js-9bf8bd730b88be507b51.js"]};/*]]>*/</script><script src="/gatsby-contentful-starter/component---src-templates-blog-post-js-9d80e2798eaf3161b46b.js" async=""></script><script src="/gatsby-contentful-starter/commons-b38ec18515ff0d42923d.js" async=""></script><script src="/gatsby-contentful-starter/styles-45d2610478b6c2f50956.js" async=""></script><script src="/gatsby-contentful-starter/app-ba407b91ab20fd43491a.js" async=""></script><script src="/gatsby-contentful-starter/webpack-runtime-6730f36da33185871d92.js" async=""></script></body></html>
